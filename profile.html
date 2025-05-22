@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Profile</title>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body class="profilebody">
+     <div class="navbar">
+        <h1>LOK SABHA ELECTION 2029</h1>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="poll.html">Poll Results</a>
+            <a href="profile.html">Profile</a>
+            <a href="login.html">Logout</a>
+        </nav>
+    </div>
+    <div class="profilecontainer">
+        <div class="profile-header">
+            <h1>Candidate Profile</h1>
+            <p>Manage your information and security settings</p>
+        </div>
+        <div class="profile-info">
+            <label>Name:</label>
+            <span id="candidateName">Vikas Kumar</span>
+        </div>
+        <div class="profile-info">
+            <label>Gender:</label>
+            <span id="gender">Male</span>
+        </div>
+        <div class="profile-info">
+            <label>Phone:</label>
+            <span id="phone">+91 9876543210</span>
+        </div>
+        <div class="profile-info">
+            <label>Voter ID:</label>
+            <span id="voterID">ABC1234567</span>
+        </div>
+        <div class="profile-info">
+            <label>Aadhar:</label>
+            <span id="aadhar">1234-5678-9012</span>
+        </div>
+        <div class="profile-info">
+            <label>Address:</label>
+            <span id="address">Gopalganj, Bihar, India</span>
+        </div>
+        <div class="actions">
+            <button class="pbutton" onclick="openModal()">Change Password</button>
+        </div>
+    </div>
+
+    <!-- Password Change Modal -->
+    <div class="modal" id="passwordModal">
+        <div class="modal-content">
+            <h2>Change Password</h2>
+            <input type="password" id="currentPassword" placeholder="Current Password">
+            <input type="password" id="newPassword" placeholder="New Password">
+            <input type="password" id="confirmPassword" placeholder="Confirm Password">
+            <div class="modal-actions">
+                <button onclick="closeModal()">Cancel</button>
+                <button onclick="updatePassword()">Update</button>
+            </div>
+        </div>
+    </div>
+
+    
+        <script src="profile.js"></script>
+
+</body>
+</html>

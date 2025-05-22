@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian PM Elections</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+    .dashbody {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background-color: #EDF7ED;
+    }
+   .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(90deg, #E67E22, #E67E22);
+        padding: 15px 30px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        border-radius: 0 0 20px 20px;
+    }
+
+    .navbar h1 {
+        font-size: 1.8rem;
+        color: #fff;
+        margin: 0;
+    }
+
+    .navbar a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 12px;
+        font-weight: 500;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+    }
+
+    .navbar a:hover {
+        color: green;
+    }
+    
+
+
+    .notice-bar {
+        background-color: #EDF7ED;
+        color:red;
+        overflow: hidden; /* Ensures text stays within the bar */
+        white-space: nowrap; /* Prevents text from wrapping */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .marquee {
+        display: inline-block;
+        animation: scrollText 10s linear infinite;
+    }
+
+    .marquee p {
+        display: inline-block;
+        margin: 0;
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+
+    @keyframes scrollText {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+
+
+
+
+    .content {
+        padding: 20px;
+    }
+
+    .card {
+        background: #EDF7ED;
+        padding: 15px;
+        border-radius: 15px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        margin-bottom: 10px;
+        
+    }
+
+   .candidate-row {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.candidate-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.candidate-details {
+    flex: 1;
+    text-align: left;
+    margin-right: 15px;
+}
+
+.candidate-details h3 {
+    margin: 5px 0;
+    font-size: 1.2em;
+    color: black;
+}
+
+.candidate-details p {
+    margin: 0;
+    font-size: 1em;
+    color: #666;
+}
+
+.party-symbol {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 15px;
+    
+}
+
+.vote-button, .about-button {
+    margin: 5px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.vote-button {
+    background-color: orange;
+}
+
+.about-button {
+    background-color: purple;
+}
+
+
+
+
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 500px;
+            text-align: left;
+        }
+
+        .close-button {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .close-button:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body class="dashbody">
+         <div class="navbar">
+        <h1>LOK SABHA ELECTION 2029</h1>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="poll.html">Poll Results</a>
+            <a href="profile.html">Profile</a>
+            <a href="login.html">Logout</a>
+        </nav>
+    </div>
+
+    <div class="notice-bar">
+    <div class="marquee">
+        <p>Important: The voting closes on 30th April 2029. Cast your vote before the deadline!</p>
+    </div>
+    </div>
+    <div class="content">
+        <div class="card">
+            <h2>PM Candidates</h2>
+
+
+     
+
+<div class="candidate-row">
+    <img src="img/modi.jpg" alt="Narendra Modi" class="candidate-image">
+    <div class="candidate-details">
+        <h3>Narendra Modi</h3>
+        <p>Party: Bharatiya Janata Party</p>
+    </div>
+    <img src="img/bjp-symbol.jpg" alt="BJP Symbol" class="party-symbol">
+    <button class="vote-button" onclick="castVote('Narendra Modi')">Vote</button>
+    <button class="about-button" onclick="showAbout('Narendra Modi', 'Full Name: Narendra Damodardas Modi\n\nDate of Birth: September 17, 1950\n\nPosition: 14th and current Prime Minister of India (since 2014)\n\nKey Initiatives:\n- Swachh Bharat Abhiyan: Nationwide cleanliness campaign.\n- Make in India: Promoting India as a global manufacturing hub.\n- Digital India: Boosting digital infrastructure and literacy.\n\nLeadership Style: Focused on development, innovation, and cultural pride.\n\nGlobal Recognition: Strengthened India\'s position on the world stage.\n\nCore Values: Inclusivity, grassroots empowerment, and self-reliance.')">About</button>
+</div>
+
+<div class="candidate-row">
+    <img src="img/kejriwal.png" alt="Arvind Kejriwal" class="candidate-image">
+    <div class="candidate-details">
+        <h3>Arvind Kejriwal</h3>
+        <p>Party: Aam Aadmi Party</p>
+    </div>
+    <img src="img/aap-symbol.jpg" alt="AAP Symbol" class="party-symbol">
+    <button class="vote-button" onclick="castVote('Arvind Kejriwal')">Vote</button>
+    <button class="about-button" onclick="showAbout('Arvind Kejriwal', 'Full Name: Arvind Kejriwal\n\nDate of Birth: August 16, 1968\n\nPosition: 7th Chief Minister of Delhi (since 2015)\n\nKey Initiatives:\n- Mohalla Clinics: Providing free healthcare services.\n- Free Education: Enhancing public education quality in Delhi.\n- Subsidized Electricity and Water: Affordable utilities for citizens.\n\nLeadership Style: Transparent governance.\n\nGlobal Recognition: Recognized for innovative urban governance.\n\nCore Values: Accountability, simplicity, and people-centric policies.')">About</button>
+</div>
+ <div class="candidate-row">
+    <img src="img/rahul.jpg" alt="Rahul Gandhi" class="candidate-image">
+    <div class="candidate-details">
+        <h3>Rahul Gandhi</h3>
+        <p>Party: Indian National Congress</p>
+    </div>
+    <img src="img/congress-symbol.png" alt="Congress Symbol" class="party-symbol">
+    <button class="vote-button" onclick="castVote('Rahul Gandhi')">Vote</button>
+    <button class="about-button" onclick="showAbout('Rahul Gandhi', 'Full Name: Rahul Gandhi\n\nDate of Birth: June 19, 1970\n\nPolitical Legacy: Belongs to the Nehru-Gandhi family.\n\nPositions Held:\n- Former President of the Indian National Congress (2017–2019).\n- Member of Parliament (Lok Sabha) from Wayanad, Kerala.\n\nKey Focus Areas:\n- Social justice and equality.\n- Youth empowerment and education.\n- Advocacy for marginalized communities.\n\nLeadership Style: Grassroots approach with a vision for modern.\n\nCore Beliefs: Championing inclusive development and democratic values.')">About</button>
+</div>
+<div class="candidate-row">
+    <img src="img/uddhav.jpg" alt="Uddhav Thackeray" class="candidate-image">
+    <div class="candidate-details">
+        <h3>Uddhav Thackeray</h3>
+        <p>Party: Shiv Sena (UBT)</p>
+    </div>
+    <img src="img/shiv-sena-symbol.png" alt="Shiv Sena Symbol" class="party-symbol">
+    <button class="vote-button" onclick="castVote('Uddhav Thackeray')">Vote</button>
+    <button class="about-button" onclick="showAbout('Uddhav Thackeray', 'Full Name: Uddhav Balasaheb Thackeray\n\nDate of Birth: July 27, 1960\n\nCurrent Role: Leader of the Shiv Sena (UBT) and former CM.\n\nPolitical Journey: Took over the leadership of Shiv Sena in 2004. Known for his focus on regional pride and Marathi identity.\n\nAchievements as CM:\n- Managed the COVID-19 pandemic in Maharashtra with a balanced approach.\n- Promoted sustainable development and infrastructure project.\n\nLeadership Style: Advocates inclusive governance while preserving.\n\nPersonal Interests: Passionate about photography and wildlife \nconservation.')">About</button>
+</div>
+
+<div class="candidate-row">
+    <img src="img/nitish.jpg" alt="Nitish Kumar" class="candidate-image">
+    <div class="candidate-details">
+        <h3>Nitish Kumar</h3>
+        <p>Party: Janata Dal (United)</p>
+    </div>
+    <img src="img/jdu-symbol.jpg" alt="JDU Symbol" class="party-symbol">
+    <button class="vote-button" onclick="castVote('Nitish Kumar')">Vote</button>
+    <button class="about-button" onclick="showAbout('Nitish Kumar', 'Full Name: Nitish Kumar\n\nDate of Birth: March 1, 1951\n\nCurrent Role: Chief Minister of Bihar (multiple terms since 2005)\n\nGovernance Highlights:\n- Saat Nischay: Programs for state development.\n- Infrastructure: Improved roads and electricity access.\n- Education: Emphasis on women and marginalized communities.\n\nKey Traits: Known for pragmatic and development-oriented politics.\n\nRecognition: Widely credited for transforming Bihar\'s governance and \npublic perception.')">About</button>
+</div>
+
+
+
+
+    <div class="modal" id="aboutModal">
+        <div class="modal-content">
+            <h2 id="aboutTitle"></h2>
+            <pre id="aboutDetails"></pre>
+            <button class="close-button" onclick="closeAbout()">Close</button>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
